@@ -63,10 +63,10 @@ git branch
 
 ### Beispiel 
 ```bash
-git branch my2.6.14 (1) \
+git branch my2.6.14    (1)
 git branch -d my2.6.13 (2)
 ```
-(1) Erstellt ein neuen Branch mit dem Namen "my2.6.14".
+(1) Erstellt ein neuen Branch mit dem Namen "my2.6.14". \
 (2) Löscht den Branch mit dem Namen "my2.6.13"
 
 ## :twisted_rightwards_arrows: Switch
@@ -114,11 +114,6 @@ Objekte von einem externen Repository anfordern und sie mit einem anderen Reposi
 git pull 
 ```
 
-### Wichtige Flags
-```bash
-
-```
-
 ## :white_check_mark: Add 
 Dateiinhalte zum Commit vormerken.
 
@@ -128,8 +123,30 @@ git add
 
 ### Wichtige Flags
 ```bash
--A
+<pathspec>...
+           Files to add content from. Fileglobs (e.g.  *.c) can be given to add all matching files. Also a leading directory name (e.g.  dir to add dir/file1 and dir/file2) can
+           be given to update the index to match the current state of the directory as a whole (e.g. specifying dir will record not just a file dir/file1 modified in the working
+           tree, a file dir/file2 added to the working tree, but also a file dir/file3 removed from the working tree). Note that older versions of Git used to ignore removed
+           files; use --no-all option if you want to add modified or new files but ignore removed ones.
+
+           For more details about the <pathspec> syntax, see the pathspec entry in gitglossary(7).
+-f, --force
+           Allow adding otherwise ignored files.
+
+-A, --all, --no-ignore-removal
+           Update the index not only where the working tree has a file matching <pathspec> but also where the index already has an entry. This adds, modifies, and removes index
+           entries to match the working tree.
+
+           If no <pathspec> is given when -A option is used, all files in the entire working tree are updated (old versions of Git used to limit the update to the current
+           directory and its subdirectories).
 ```
+### Beispiel 
+```bash
+git add Documentation/\*.txt    (1)
+git add -A                      (2)
+```
+(1) Fügt alle Dateien mit der Dateiendung `.txt` im Ordner `Documentation` hinzu. \
+(2) Alle aktuellen Änderungen werden hinzugefügt. 
 
 ## :file_folder: Commit
 Änderungen in das Repository eintragen.
@@ -139,8 +156,28 @@ git commit
 ```
 ### Wichtige Flags
 ```bash
--A
+-a, --all
+           Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
+
+-m <msg>, --message=<msg>
+           Use the given <msg> as the commit message. If multiple -m options are given, their values are concatenated as separate paragraphs.
+
+           The -m option is mutually exclusive with -c, -C, and -F.
+
+--author=<author>
+           Override the commit author. Specify an explicit author using the standard A U Thor <author@example.com> format. Otherwise <author> is assumed to be a pattern and is
+           used to search for an existing commit by that author (i.e. rev-list --all -i --author=<author>); the commit author is then copied from the first such commit found.
+
+--date=<date>
+           Override the author date used in the commit.
+
 ```
+
+### Beispiel 
+```bash
+git commit -a -m "better Markdown"  
+```
+Alle geänderten Dateien werden mit der Nachricht `better Markdown` commitet. 
 
 ## :outbox_tray: Push
 Remote-Referenzen mitsamt den verbundenen Objekten aktualisieren.
@@ -149,25 +186,24 @@ Remote-Referenzen mitsamt den verbundenen Objekten aktualisieren.
 git push
 ```
 
-### Wichtige Flags
-```bash
--A
-```
-
-
 # :no_entry_sign: .gitignore 
 Mit einem ".gitignore" File kann Git mitgeteilt werden welche Daten nicht syn­chro­ni­sie­rt werden. 
 Dieser File mus im Hauptverzeichnis des Repository abgelegt werden.
 
-## Muster
-* `**/logs`
-* `*.log`
-* `debug[0-9].log`
-* `logs/`
-* `*.log`
+### Muster
+| Muster           | Bsp.                                                             | Beschreibung                                                                                          |
+| ---------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `hello.txt`      | hello.txt <br /> *aber nicht* <br /> test/hallo.txt              | Genau eine Datei wird ignoriert                                                                       |
+| `hello.*`        | hello.txt<br /> hello.cpp<br /> *aber nicht* <br />hello1.txt    | Alle Dateien mit dem gleichen Namen, werden ignoriert, dabei wird nicht auf die Dateiendung geachtet. |
+| `**/logs`        | test/logs  <br /> test/foo/logs                                  | In allen Ordnern wird der genannte Ordner Ignoriert                                                   |
+| `logs/**`        | logs/a.out <br /> logs/cpp/a.out                                 | Alles was in dem Ordner abgelegt ist wird ignoriert.                                                  |
+| `*.log`          | test.log <br /> build/test2.log                                  | Alle Dateien mit der gleichen Dateiendung werden ignoriert.                                           |
+| `debug[0-9].log` | debug0.log<br /> debug9.log<br /> *aber nicht* <br />debug10.log | Alle Dateien welche ins das Muster passen werden ignoriert                                            |
+| `!logs/log1.log` |                                                                  | Der angegebene Pfad wird explizit Synchronisiert                                                      |
 
+[git.com Git Dokumentation](https://git-scm.com/docs/gitignore)
 
-## Beispiel für C/C++
+### Beispiel für C/C++
 
 ```bash
 # Build Ordner 
