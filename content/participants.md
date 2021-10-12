@@ -20,7 +20,7 @@ Bogdan
 
 :airplane: Bernd
 
-Conrad
+:cop: Julius
 
 Josef
 
