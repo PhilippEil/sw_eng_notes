@@ -6,7 +6,7 @@ cd, pwd, ls
 how does `.` and `..` work?
 
 # Manipulate files and folders
-## :pencil2: touch
+## :pencil2: touch - neue Datei erstellen oder Zeitstempel aktualisieren
 touch kann zum Ändern der Zugriffs- und Änderungszeitstempel von Dateien verwendet werden. Aber auch das erstellen neuer, leerer Dateien ist möglich!
 
 **Syntax**
