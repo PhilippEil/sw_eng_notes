@@ -14,20 +14,20 @@ touch kann zum Ändern der Zugriffs- und Änderungszeitstempel von Dateien verwe
 touch [OPTION] file
 ```
 
-**Wichtige Flags**
--a              Modifikation des Zugriffszeitstempels der Datei
--m              Modifikation des Änderungszeitsempels der Datei
+**Wichtige Flags**\
+-a              Modifikation des Zugriffszeitstempels der Datei\
+-m              Modifikation des Änderungszeitsempels der Datei\
 -c --no-create (Wenn keine Datei vorhanden ist:) Keine Datei erstellen)
 
 ### Beispiel
-***Leere Datei erzeugen***
+***Leere Datei erzeugen***\
 Eine leere Datei wird erzeugt, wenn keine Datei mit dem gewählten Namen vorhanden ist und die -c bzw. --no-create Flag nicht gesetzt ist. 
 ```bash
 touch sw_engineering.txt
 ```
 
-***Zeitstempel einer exisiterenden Datei aktualisieren***
-Mit dem befehl ```stat file``` werden unter Anderem die Zeitstempel einer Datei angezeigt.
+***Zeitstempel einer exisiterenden Datei aktualisieren***\
+Mit dem befehl ```stat file``` werden unter Anderem die Zeitstempel einer Datei angezeigt.\
 
 ```bash
 stat sw_engineering.txt
@@ -61,10 +61,10 @@ mv verschiebt Dateien und Verzeichnisse, dadurch können Dateien oder Verzeichni
 ```
 
 **Wichtige Flags**
--v                                                              Steht für “verbose” und Zeigt alles an was der Befehl mv gerade macht
--i                                                              führt dazu, dass mv nach Benutzerrechten fragt, bevor eine bestehende Datei überschrieben wird
--n                                                              überschreibt keine bestehenden Dateien
--b                                                              erstellt eine Backup über die Zieldateien
+-v                                                              Steht für “verbose” und Zeigt alles an was der Befehl mv gerade macht\
+-i                                                              führt dazu, dass mv nach Benutzerrechten fragt, bevor eine bestehende Datei überschrieben wird\
+-n                                                              überschreibt keine bestehenden Dateien\
+-b                                                              erstellt eine Backup über die Zieldateien\
         
 ### Beispiele:
 **Verschiebt die Datei „test.txt“ von „/home/user/“ nach „tmp/“**
@@ -94,10 +94,10 @@ cp [optionen] quelle ziel
 ```
 
 **Wichtige Flags**
--a                                                              Steht für „archive“. Mit diesem Schalter werden Zeitstempel, Besitzer, Gruppen, Dateirechte wie von der Quelle beibehalten
--b                                                              erstellt eine Backup
--r                                                              Steht für „rekursiv“. Mit diesem Schalter werden alle Ordner und Unterordner inkl. Dateien kopiert. Also ganze Verzeichnisbäume
--v                                                              Steht für “verbose” und Zeigt alles an was der Befehl cp gerade macht
+-a                                                              Steht für „archive“. Mit diesem Schalter werden Zeitstempel, Besitzer, Gruppen, Dateirechte wie von der Quelle beibehalten\
+-b                                                              erstellt eine Backup\
+-r                                                              Steht für „rekursiv“. Mit diesem Schalter werden alle Ordner und Unterordner inkl. Dateien kopiert. Also ganze Verzeichnisbäume\
+-v                                                              Steht für “verbose” und Zeigt alles an was der Befehl cp gerade macht\
         
 ### Beispiele:
 **Kopiert die Datei „test.txt“ aus /home/user/ nach /tmp**
@@ -122,8 +122,8 @@ rm [OPTION]... FILE
 ```
 
 **Wichtige Flags**
--i                                                             Steht für interactive. Fragt bei jedem Löschvorgang ob die Datei wirklich gelöscht werden soll, dies muss dann mit der Taste „y“ bestätigt werden
--r                                                             Steht für „recursive“. Hier werden alle Dateien und Ordner rekursiv vom angegebenen Pfad gelöscht
+-i                                                             Steht für interactive. Fragt bei jedem Löschvorgang ob die Datei wirklich gelöscht werden soll, dies muss dann mit der Taste „y“ bestätigt werden\
+-r                                                             Steht für „recursive“. Hier werden alle Dateien und Ordner rekursiv vom angegebenen Pfad gelöscht\
 -v                                                             Steht für „verbose“ und Zeigt alles an was der Befehl rm gerade macht
         
 ### Beispiele:
@@ -145,10 +145,10 @@ rm -ri /tmp
 ``` 
                                   
 ## :file_folder: mkdir
-Mit `mkdir` (*engl. make directory*) kann ein neues Verzeichnis erstellt werden.
+Mit `mkdir` (*engl. make directory*) kann ein neues Verzeichnis erstellt werden.\
 Dem Befehl folgt eine Liste von Pfadnamen als Argument.
 
-**Syntax
+**Syntax**
 ```bash
 mkdir [Verzeichnisname]
 ```
