@@ -61,8 +61,8 @@ mv verschiebt Dateien und Verzeichnisse, dadurch können Dateien oder Verzeichni
 ```
 
 **Wichtige Flags**
--v                                                               Steht für “verbose” und Zeigt alles an was der Befehl mv gerade macht
--i                                                               führt dazu, dass mv nach Benutzerrechten fragt, bevor eine bestehende Datei überschrieben wird
+-v                                                              Steht für “verbose” und Zeigt alles an was der Befehl mv gerade macht
+-i                                                              führt dazu, dass mv nach Benutzerrechten fragt, bevor eine bestehende Datei überschrieben wird
 -n                                                              überschreibt keine bestehenden Dateien
 -b                                                              erstellt eine Backup über die Zieldateien
         
@@ -82,21 +82,82 @@ mv /home/user /tmp/
 **Verschiebt alle Dateien die mit „.txt“ enden nach „/tmp/“**
 ```bash
 mv *.txt /tmp/  
-```                                        
-### :file_folder: mkdir
+```     
+
+## :camera: cp - copy files and directories
+cp kopiert Dateien und Verzeichnisse. Dabei wird immer erst die Quelle und dann das Ziel angegeben
+
+**Syntax**
+```bash
+cp [optionen] quelle ziel
+
+```
+
+**Wichtige Flags**
+-a                                                              Steht für „archive“. Mit diesem Schalter werden Zeitstempel, Besitzer, Gruppen, Dateirechte wie von der Quelle beibehalten
+-b                                                              erstellt eine Backup
+-r                                                              Steht für „rekursiv“. Mit diesem Schalter werden alle Ordner und Unterordner inkl. Dateien kopiert. Also ganze Verzeichnisbäume
+-v                                                              Steht für “verbose” und Zeigt alles an was der Befehl cp gerade macht
+        
+### Beispiele:
+**Kopiert die Datei „test.txt“ aus /home/user/ nach /tmp**
+```bash
+cp /home/user/test.txt /tmp/
+```
+**Kopiert alle Dateien und Unterordner von /home/user/ nach /tmp/**
+```bash
+cp -r /home/user/ /tmp/	
+```
+**Kopiert alle Dateien und Unterordner von /home/user/ nach /tmp/ und behält dabei alle Zeitstempel, Dateirechte, Benutzer und Gruppen des Originals (Der Quelle)**
+```bash
+cp -ar /home/user/ /tmp/	 
+```
+
+## :bomb: rm - remove file
+rm löscht Dateien und Verzeichnisse
+
+**Syntax**
+```bash
+rm [OPTION]... FILE
+```
+
+**Wichtige Flags**
+-i                                                             Steht für interactive. Fragt bei jedem Löschvorgang ob die Datei wirklich gelöscht werden soll, dies muss dann mit der Taste „y“ bestätigt werden
+-r                                                             Steht für „recursive“. Hier werden alle Dateien und Ordner rekursiv vom angegebenen Pfad gelöscht
+-v                                                             Steht für „verbose“ und Zeigt alles an was der Befehl rm gerade macht
+        
+### Beispiele:
+**Löscht die Datei „meinedatei.txt“ im aktuellen Arbeitsverzeichnis**
+```bash
+rm meinedatei.txt	
+```
+**Löscht das Verzeichnis /tmp inkl. aller Dateien und Unterordner (rekursiv)**
+```bash
+rm -r /tmp	
+```
+**Löscht das Verzeichnis /tmp inkl. aller Dateien und Unterordner (rekursiv) und Zeigt dabei genau an was es gerade macht (verbose)**
+```bash
+rm -rv /tmp	
+```
+**Löscht das Verzeichnis /tmp inkl. aller Dateien und Unterordner (rekursiv) und fragt bei jedem Löschvorgang nach ob es dies auch wirklich machen soll**
+```bash
+rm -ri /tmp
+``` 
+                                  
+## :file_folder: mkdir
 Mit `mkdir` (*engl. make directory*) kann ein neues Verzeichnis erstellt werden.
 Dem Befehl folgt eine Liste von Pfadnamen als Argument.
 
-#### Beispiel ohne Parameter
+**Syntax
 ```bash
 mkdir [Verzeichnisname]
 ```
-#### Parameter
+**wichtige Flags**
 `-p`: Wenn kein Verzeichnis existiert, wird ein neues erstellt. Bei vorhandenem Verzeichnis wird einfach fortgefahren.</p>
 `-v`: Auf der Konsole können die erstellen Verzeichnisse ausgegeben werden.</p>
 `-m`: Hinter dem Parameter kann als Oktalwert die Berechtigung für das Verzeichnis angegeben werden. 
 
-#### Beispiel mit Parameter
+### Beispiel mit Parameter
 ```bash
 mkdir -p /dokumente/neuerOrdner/test
 ```
