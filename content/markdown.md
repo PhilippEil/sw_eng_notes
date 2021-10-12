@@ -5,11 +5,11 @@
 
 To achieve headings like in e.g. "MS Word" Markdown provides hashes (symbol '#'). The amount of hashes dictates the order of the heading, so "heading 3" is smaller than "heading 1".
 
-'# Title'
+`# Title`
 
-'## Title' 
+`## Title` 
 
-'### Title' 
+`### Title` 
 
 will produce
 
@@ -20,14 +20,68 @@ will produce
 ## Formatting Text
 Of course Markup provides ways to make letters bold, italic and form block quotes.
 
-' * text * ' (without the spaces): *text*
+` * text * ` (without the spaces): *text*
 
-' ** text ** ' (without the spaces): **text**
+` ** text ** ` (without the spaces): **text**
 
-' *** text *** ' (without the spaces): ***text***
+` *** text *** ` (without the spaces): ***text***
 
-'>block of info':
+`>block of info`:
 >block of info
+
+`\`, `<br />`: will create a new line 
+
+## Code Block 
+Of corse has Markdown has also a fancy way to format Code:
+
+```
+`This is a in line format`
+```
+will produce:
+`This is a in line format`
+<br />
+
+````
+```
+This is 
+a multi 
+line Format 
+```
+````
+will produce:
+```
+This is 
+a multi 
+line Format 
+```
+<br />
+There is also a support for numerus languages
+
+````
+```c++
+// globale variable
+int a,b 
+
+int main(){
+    a = 10;
+    b = 20;
+
+    return a+b;
+}
+```
+````
+
+```c++
+// globale variable
+int a,b 
+
+int main(){
+    a = 10;
+    b = 20;
+
+    return a+b;
+}
+```
 
 ## Links
 
@@ -39,13 +93,12 @@ Check out this [repo](https://github.com/PhilippEil/sw_eng_notes)!
 
 Creating lists with numbers or dots is very straight forward:
 
-' 1. this '
-
-' 2. is '
-
-' 3. a '
-
-' 4. list '
+```
+ 1. this 
+ 2. is 
+ 3. a 
+ 4. list 
+```
 
 1. this
 2. is
@@ -53,10 +106,10 @@ Creating lists with numbers or dots is very straight forward:
 4. list
 
 bullet list:
-
-' * bullet '
-
-' * list '
+```
+ * bullet 
+ * list 
+```
 
 * bullet
 * list
@@ -73,4 +126,19 @@ Want to insert a picture from an URL? Easy:
 
 ![image](https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png)
 
+## Tables
+Creating a Table is easy too:
+```
+| a   | b   | c   |
+| --- | --- | --- |
+| 1   | 2   | 3   |
+| 4   | 5   | 6   |
+| 7   | 8   | 9   |
+```
+
+| a   | b   | c   |
+| --- | --- | --- |
+| 1   | 2   | 3   |
+| 4   | 5   | 6   |
+| 7   | 8   | 9   |
 
