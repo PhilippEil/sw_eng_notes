@@ -27,7 +27,7 @@ touch sw_engineering.txt
 ```
 
 ***Zeitstempel einer exisiterenden Datei aktualisieren***
-Mit dem befehl ```bash stat file``` werden unter Anderem die Zeitstempel einer Datei angezeigt.
+Mit dem befehl ```stat file``` werden unter Anderem die Zeitstempel einer Datei angezeigt.
 
 ```bash
 stat sw_engineering.txt
@@ -37,7 +37,7 @@ Modify: 2021-10-12 16:27:54.991475500 +0200
 Change: 2021-10-12 16:27:54.991251300 +0200
 Birth: 2021-10-12 16:27:54.986804300 +0200
 ```
-Durch anwenden von ```bash touch``` auf eine bestehenden Datei werden die Zeitstempel "Acess, Modify und Change" auf die aktuelle Systemzeit gesetzt.
+Durch anwenden von ```touch``` auf eine bestehenden Datei werden die Zeitstempel "Acess, Modify und Change" auf die aktuelle Systemzeit gesetzt.
 
 ```bash
 touch sw_engineering.txt
