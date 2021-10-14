@@ -120,7 +120,7 @@ bullet list:
 
 Want to insert a picture from an URL? Easy:
 
-' ![image] (https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png) '
+` ![image] (https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png) `
 
 (without spaces) produces:
 
