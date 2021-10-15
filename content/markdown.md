@@ -20,11 +20,11 @@ will produce
 ## Formatting Text
 Of course Markup provides ways to make letters bold, italic and form block quotes.
 
-` * text * ` (without the spaces): *text*
+` *text* `: *text*
 
-` ** text ** ` (without the spaces): **text**
+` **text** `: **text**
 
-` *** text *** ` (without the spaces): ***text***
+` ***text*** `: ***text***
 
 `>block of info`:
 >block of info
@@ -35,10 +35,10 @@ Of course Markup provides ways to make letters bold, italic and form block quote
 Of corse has Markdown has also a fancy way to format Code:
 
 ```
-`This is a in line format`
+`This is an in-line format`
 ```
 will produce:
-`This is a in line format`
+`This is an in-line format`
 <br />
 
 ````
@@ -55,7 +55,7 @@ a multi
 line Format 
 ```
 <br />
-There is also a support for numerus languages
+There is also a support for numerous languages:
 
 ````
 ```c++
@@ -72,7 +72,7 @@ int main(){
 ````
 
 ```c++
-// globale variable
+// global variable
 int a,b 
 
 int main(){
@@ -85,9 +85,9 @@ int main(){
 
 ## Links
 
-A link can be added to every word of a sentence with "[word] (url)" without spaces.
+A link can be added to every word of a sentence with `[word](url)` without spaces.
 
-Check out this [repo](https://github.com/PhilippEil/sw_eng_notes)!
+Check out this [link](https://github.com/PhilippEil/sw_eng_notes)!
 
 ## Numbered lists / Bullet lists
 
@@ -120,9 +120,9 @@ bullet list:
 
 Want to insert a picture from an URL? Easy:
 
-` ![image] (https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png) `
+` ![image](https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png) `
 
-(without spaces) produces:
+produces:
 
 ![image](https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png)
 
