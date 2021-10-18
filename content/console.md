@@ -123,6 +123,7 @@ rm [OPTION]... FILE
 
 **Wichtige Flags**
 -i                                                             Steht für interactive. Fragt bei jedem Löschvorgang ob die Datei wirklich gelöscht werden soll, dies muss dann mit der Taste „y“ bestätigt werden\
+-f  --force                                                    Steht für "force". Bei der Ausführung des Befehls lösen nicht vorhandene Dateien und Ordner keine Fehlermeldung aus. Diese Flag eignet sich gut für Skripte.\
 -r                                                             Steht für „recursive“. Hier werden alle Dateien und Ordner rekursiv vom angegebenen Pfad gelöscht\
 -v                                                             Steht für „verbose“ und Zeigt alles an was der Befehl rm gerade macht
         
