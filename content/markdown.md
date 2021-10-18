@@ -126,6 +126,14 @@ produces:
 
 ![image](https://justyy.com/wp-content/uploads/2016/01/markdown-syntax-language.png)
 
+Local Pictures:
+
+`![image](doc/markdown-syntax-language.png)`
+
+produces:
+
+![image](doc/markdown-syntax-language.png)
+
 ## Tables
 Creating a Table is easy too:
 ```
