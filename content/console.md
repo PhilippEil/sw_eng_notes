@@ -60,7 +60,7 @@ mv verschiebt Dateien und Verzeichnisse, dadurch können Dateien oder Verzeichni
 
 ```
 
-**Wichtige Flags**
+**Wichtige Flags**\
 -v                                                              Steht für “verbose” und Zeigt alles an was der Befehl mv gerade macht\
 -i                                                              führt dazu, dass mv nach Benutzerrechten fragt, bevor eine bestehende Datei überschrieben wird\
 -n                                                              überschreibt keine bestehenden Dateien\
@@ -93,7 +93,7 @@ cp [optionen] quelle ziel
 
 ```
 
-**Wichtige Flags**
+**Wichtige Flags**\
 -a                                                              Steht für „archive“. Mit diesem Schalter werden Zeitstempel, Besitzer, Gruppen, Dateirechte wie von der Quelle beibehalten\
 -b                                                              erstellt eine Backup\
 -r                                                              Steht für „rekursiv“. Mit diesem Schalter werden alle Ordner und Unterordner inkl. Dateien kopiert. Also ganze Verzeichnisbäume\
@@ -121,7 +121,7 @@ rm löscht Dateien und Verzeichnisse
 rm [OPTION]... FILE
 ```
 
-**Wichtige Flags**
+**Wichtige Flags**\
 -i                                                             Steht für interactive. Fragt bei jedem Löschvorgang ob die Datei wirklich gelöscht werden soll, dies muss dann mit der Taste „y“ bestätigt werden\
 -f  --force                                                    Steht für "force". Bei der Ausführung des Befehls lösen nicht vorhandene Dateien und Ordner keine Fehlermeldung aus. Diese Flag eignet sich gut für Skripte.\
 -r                                                             Steht für „recursive“. Hier werden alle Dateien und Ordner rekursiv vom angegebenen Pfad gelöscht\
@@ -153,7 +153,7 @@ Dem Befehl folgt eine Liste von Pfadnamen als Argument.
 ```bash
 mkdir [Verzeichnisname]
 ```
-**wichtige Flags**
+**wichtige Flags**\
 `-p`: Wenn kein Verzeichnis existiert, wird ein neues erstellt. Bei vorhandenem Verzeichnis wird einfach fortgefahren.</p>
 `-v`: Auf der Konsole können die erstellen Verzeichnisse ausgegeben werden.</p>
 `-m`: Hinter dem Parameter kann als Oktalwert die Berechtigung für das Verzeichnis angegeben werden. 
