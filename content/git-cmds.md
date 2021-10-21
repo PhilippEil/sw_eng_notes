@@ -113,6 +113,33 @@ Objekte von einem externen Repository anfordern und sie mit einem anderen Reposi
 ```bash
 git pull 
 ```
+## Unterschied zwischen Pull und Fetch
+Da der Unterschied zwischen Pull und Fetch nicht sofort ersichtlich ist erfolgt an dieser Stelle eine detaillierte Beschreibung.
+
+Die Ausgangssituation ist in der unteren Abbildung dargestellt. Das Remote-Repository, auch als "Origin" bezeichnet, besitzt einen `main` Branch mit Commit 1-3. Es ist unserem Lokalen repository also einen Commit voraus. 
+
+Lokal verwaltet GitHub zwei Branches. Den schon bekannten `main` Branch auf dem sich ganz normal Arbeiten lässt und einen `origin/main` Branch der den letzten **bekannten** Zustand des Remote-Repositories anzeigt. 
+
+
+:information_source: Um alle Branches anzuzeigen kann der befehl `git branch -a` verwendet werden.
+
+![image](doc/Explaination_Pull_Fetch_1.png)
+
+### git fetch
+Wird der Befehl `git fetch` ausgeführt, werden alle `origin\...` branches aktualisiert. Der `main` Branch auf den aktuell gearbeitet wird bleibt davon unberührt.
+
+![image](doc/Explaination_Pull_Fetch_2.png)
+
+Mit dem Befehl `git merge origin/main` kann der aktualisierte Branch `origin/main` dann in den ausgechekten main Branch gemerged werden.
+
+### git pull
+Der Befehl `git pull` ist eine kombination aus `git fetch` und `git merge origin/main`. Die remote Branches werden aktuallisiert und die Änderungen sofort in den `main` Branch gemerged.
+
+![image](doc/Explaination_Pull_Fetch_3.png)
+
+
+:information_source: Weitere Informationen und interaktive Aufgaben finden sich auf: [LearnGitBranching](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+
 
 ## :white_check_mark: Add 
 Dateiinhalte zum Commit vormerken.
