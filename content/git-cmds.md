@@ -123,7 +123,6 @@ Lokal verwaltet GitHub zwei Branches. Den schon bekannten `main` Branch auf dem 
 
 :information_source: Um alle Branches anzuzeigen kann der befehl `git branch -a` verwendet werden.
 
-
 ![image](doc/Explaination_Pull_Fetch_1.png)
 
 ### git fetch
@@ -139,7 +138,7 @@ Der Befehl `git pull` ist eine kombination aus `git fetch` und `git merge origin
 ![image](doc/Explaination_Pull_Fetch_3.png)
 
 
-:information_source: Weitere Informationen und interaktive Aufgaben finden sich auf: [LearnGitBranching]https://www.youtube.com/watch?v=dQw4w9WgXcQ
+:information_source: Weitere Informationen und interaktive Aufgaben finden sich auf: [LearnGitBranching](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
 
 ## :white_check_mark: Add 
