@@ -1,0 +1,11 @@
+name: Auto-assign Issue
+  # You may pin to the exact commit or the version.
+  # uses: pozil/auto-assign-issue@acd0288b29b67d9c5097b8131a1a727d9322e6c6
+  uses: pozil/auto-assign-issue@v1.1.0
+  with:
+    # The GITHUB_TOKEN, needed to update the Issue
+    repo-token: # optional, default is ${{ github.token }}
+    # Comma separated list of user names
+    assignees: PhilippEil
+    # Number of assignee
+    numOfAssignee: # optional
